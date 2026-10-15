@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrewLite — Tests</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .test-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .test-item { padding: 10px 14px; border-radius: 10px; border: 1px solid var(--bl-border); background: #fff; font-size: .9rem; }
+    .test-item.pass { border-left: 5px solid #1f8a4c; }
+    .test-item.fail { border-left: 5px solid var(--bl-danger); }
+    .test-item .test-name { font-weight: 700; }
+    .test-item .test-detail { color: var(--bl-muted); font-size: .82rem; margin-top: 2px; word-break: break-word; }
+    .summary { font-weight: 800; margin: 14px 0; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="brand-logo" aria-hidden="true">B</span>BrewLite</a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a href="index.html">Menu</a>
+        <a href="orders.html">Đơn của tôi</a>
+        <a href="tests.html" class="active" aria-current="page">Tests</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">Kiểm thử</h1>
+      <p class="page-subtitle">Bộ test thuần JS cho Task 3 &amp; Task 9 (mở file này bằng trình duyệt).</p>
+      <p class="summary" id="summary">Đang chạy...</p>
+      <ul class="test-list" id="test-list"></ul>
+    </div>
+  </main>
+
+  <!-- Chỉ nạp các file thuần/dữ liệu — không nạp controller trang -->
+  <script src="js/config.js"></script>
+  <script src="js/format.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/status.js"></script>
+  <script src="js/mocks-products.js"></script>
+  <script src="js/mocks-orders.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/tests.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "brewlite-frontend",
+  "version": "1.0.0",
+  "description": "BrewLite — frontend web tĩnh (Task 3: Menu, Task 9: Lịch sử đơn)",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "test": "node run-tests-node.js",
+    "test:pages": "node run-page-tests.js",
+    "test:all": "node run-tests-node.js && node run-page-tests.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "jsdom": "^30.1.2"
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrewLite — Menu</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true">B</span>
+        BrewLite
+      </a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a href="index.html" class="active" aria-current="page">Menu</a>
+        <a href="orders.html">Đơn của tôi</a>
+      </nav>
+      <div class="header-actions">
+        <!-- Slot giỏ hàng: Task 5 sẽ thay bằng badge chính thức -->
+        <span class="cart-slot" title="Giỏ hàng" aria-label="Giỏ hàng">
+          🛒
+          <span class="cart-count" hidden>0</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">Menu đồ uống &amp; ăn vặt</h1>
+      <p class="page-subtitle">15 món nước · 5 món ăn vặt — bấm <strong>+</strong> để thêm nhanh vào giỏ (size M).</p>
+
+      <!-- Toolbar: tìm kiếm + lọc danh mục (ẩn nếu backend chưa có category) -->
+      <div class="toolbar" id="toolbar" hidden>
+        <div class="searchbar" id="searchbar">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Tìm món... (vd: ca phe)"
+            aria-label="Tìm món"
+            autocomplete="off">
+          <button type="button" class="search-clear" id="search-clear" aria-label="Xóa từ khóa">✕</button>
+        </div>
+        <div class="category-filter" id="category-filter" role="group" aria-label="Lọc theo danh mục"></div>
+      </div>
+
+      <!-- Vùng render theo state -->
+      <div id="content" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    BrewLite — demo frontend (Task 3: Menu · Task 9: Lịch sử đơn)
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Thứ tự load: config → thuần (format/filter/status) → data → api → cart → trang -->
+  <script src="js/config.js"></script>
+  <script src="js/format.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/mocks-products.js"></script>
+  <script src="js/mocks-orders.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

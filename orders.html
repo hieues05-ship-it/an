@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrewLite — Đơn của tôi</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true">B</span>
+        BrewLite
+      </a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a href="index.html">Menu</a>
+        <a href="orders.html" class="active" aria-current="page">Đơn của tôi</a>
+      </nav>
+      <div class="header-actions">
+        <!-- Slot giỏ hàng: Task 5 sẽ thay bằng badge chính thức -->
+        <span class="cart-slot" title="Giỏ hàng" aria-label="Giỏ hàng">
+          🛒
+          <span class="cart-count" hidden>0</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">Đơn của tôi</h1>
+      <p class="page-subtitle">Bấm vào đơn để xem danh sách món đã gọi.</p>
+
+      <!-- Vùng render theo state: loading | error | unauthenticated | empty | success -->
+      <div id="content" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    BrewLite — demo frontend (Task 3: Menu · Task 9: Lịch sử đơn)
+  </footer>
+
+  <!-- Thứ tự load: config → thuần (format/status) → data → api → cart → trang -->
+  <script src="js/config.js"></script>
+  <script src="js/format.js"></script>
+  <script src="js/status.js"></script>
+  <script src="js/mocks-products.js"></script>
+  <script src="js/mocks-orders.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/orders.js"></script>
+</body>
+</html>
